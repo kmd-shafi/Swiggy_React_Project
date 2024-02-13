@@ -1,0 +1,30 @@
+{
+  "name": "swiggy_react_project",
+  "version": "1.0.0",
+  "description": "this react by shafi",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kmd-shafi/Swiggy_React_Project.git"
+  },
+  "keywords": [],
+  "author": "K.Mohammed.shafi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kmd-shafi/Swiggy_React_Project/issues"
+  },
+  "homepage": "https://github.com/kmd-shafi/Swiggy_React_Project#readme",
+  "devDependencies": {
+    "parcel": "^2.11.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}
