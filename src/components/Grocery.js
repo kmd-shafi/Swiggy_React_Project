@@ -1,3 +1,5 @@
+import { useContext } from "react";
+
 const Grocery = () => {
   return (
     <div>
