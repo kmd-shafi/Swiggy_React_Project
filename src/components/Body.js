@@ -30,9 +30,6 @@ const Body = () => {
     setFilteredRestaurant(
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
-    console.log(
-      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
   };
 
   const onlineStatus = useOnlineStatus();
@@ -56,6 +53,7 @@ const Body = () => {
         <div className="search m-4 p-4">
           <input
             type="text"
+            data-testid="searchInput"
             className="search-box border border-solid border-black"
             value={searchText}
             onChange={(e) => {
@@ -107,12 +105,9 @@ const Body = () => {
             key={restaurant.info.id}
           >
             {restaurant.info.isOpen ? (
-              <RestaurantCardPromoted
-                key={restaurant.info.id}
-                resdata={restaurant}
-              />
+              <RestaurantCardPromoted resData={restaurant?.info} />
             ) : (
-              <Restaurantc key={restaurant.info.id} resdata={restaurant} />
+              <Restaurantc resData={restaurant?.info} />
             )}
           </Link>
         ))}

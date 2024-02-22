@@ -3,10 +3,13 @@ import { useContext } from "react";
 import Usercontext from "../utils/Usercontext";
 
 const Restaurantc = (props) => {
-  const { resdata } = props;
-  const { name, cuisines, avgRating, costForTwo, cloudinaryImageId } =
-    resdata?.info;
+  const { resData } = props;
+
+  console.log(resData);
+
+  const { name, cuisines, avgRating, costForTwo, cloudinaryImageId } = resData;
   const { loggedInuser } = useContext(Usercontext);
+
   return (
     <div className="res-card m-4 p-4 w-[250px] rounded-lg bg-gray-100 hover:bg-gray-200">
       <img
@@ -18,7 +21,7 @@ const Restaurantc = (props) => {
       <h4>cuisines-{cuisines.join(", ")}</h4>
       <h4>⭐{avgRating} Star</h4>
       <h4>cost-{costForTwo}</h4>
-      <h4>deliveryTime-{resdata?.info?.sla?.deliveryTime} mins</h4>
+      <h4>deliveryTime-{resData?.sla?.deliveryTime} mins</h4>
       <h4>User : {loggedInuser}</h4>
     </div>
   );
@@ -28,7 +31,7 @@ const Restaurantc = (props) => {
 export const withPromotedLabel = (Restaurantc) => {
   return (props) => {
     return (
-      <div>
+      <div data-testid="rescard">
         <label className="absolute shadow-lg text-black m-2 p-2  rounded-lg">
           Shop is open
         </label>

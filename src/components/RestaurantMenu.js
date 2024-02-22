@@ -11,13 +11,9 @@ const RestaurantMenu = () => {
 
   const resInfo = useRestaurantMenu(resId);
 
-  console.log(resInfo);
-
   if (resInfo === null) {
     return <Shimmer />;
   }
-
-  console.log(resInfo);
 
   const { name, cuisines, costForTwoMessage } =
     resInfo?.data?.cards[2]?.card?.card?.info;
